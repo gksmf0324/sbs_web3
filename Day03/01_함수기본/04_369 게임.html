@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>369 게임</title>
+    <script>
+        function ThreeSixNine( ) {
+
+            let result = ''
+
+            for (let i = 0; i < 100; i++) {
+                
+                // 일의자리
+                 let 일 = i % 10
+                // 십의자리- parseInt() : 정수값으로 변환하는 메서드
+                 let 십 = parseInt( i / 10)
+                 //i :13
+                 //i /10 =1.3
+                
+                 let  일369 = (일 == 3 || 일 == 6 || 일 ==9)
+                 let  십369 = (십 == 3 || 십 == 6 || 십 ==9)
+
+                // 십, 일, 자리 둘다 369 인경우
+                if(일369 && 십369) {
+                    result += '**'
+                }
+                // 십, 일, 자리 둘중에 하나만 369인 경우
+                else if ( 일369 || 십369 ) {
+                    result += '*'
+                }
+                // 그 외
+
+                else{
+                    result +=i
+                }
+                result += '<br>'
+
+            }
+            document.write(result)
+
+        }
+
+        //함수호출
+        ThreeSixNine()
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

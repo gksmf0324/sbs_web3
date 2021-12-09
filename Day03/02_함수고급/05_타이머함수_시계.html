@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>타이머함수 시계</title>
+    <script>
+        setInterval(() => {
+            let timer = new Date()
+            let h = timer.getHours()
+            let m = timer.getMinutes()
+            let s = timer.getSeconds()
+            let time = h + ":" + m + ":" + s
+            console.log(time)
+            document.getElementById('time').innerHTML = time 
+        },)
+    </script>
+</head>
+<body>
+    <h1 id="time"></h1>
+</body>
+</html>
